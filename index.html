@@ -1,237 +1,178 @@
-<!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Portifólio de Ciência de Dados</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfólio - Leandro Alves | Cientista de Dados & Tech Lead</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <header class="header">
+    <div class="brand">
+      
+      <div>
+        <div style="font-weight:700">Leandro Alves</div>
+        <div style="font-size:13px;color:var(--muted)">Cientista de Dados & Tech Lead</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="experiencias.html">Experiências</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <div class="kicker">Cientista de Dados & Tech Lead</div>
+        <!-- <h1 class="h1">Transformando dados em vantagem competitiva</h1> -->
+        <p class="lead">Com mais de 5 anos de experiência, lidero iniciativas de dados do início ao fim: da arquitetura LakeHouse e pipelines ETL até a implantação de modelos de Machine Learning em produção. Atuo como elo entre a estratégia e a execução, garantindo que a inteligência de dados impulsione crescimento e eficiência operacional.</p>
+        <div style="margin-top:60px">
+          <a href="#projetos" style="padding:10px 16px;border-radius:12px;background:var(--accent);color:#071126;font-weight:700;text-decoration:none">Ver Projetos</a>
+          <a href="experiencias.html" style="padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);color:var(--muted);margin-left:10px;text-decoration:none">Minha Trajetória</a>
+        </div>
+      </div>
+      <div class="hero-card">
+    <img src="images/leandro.jpeg" alt="Foto de Perfil de Leandro Alves" style="width:200px;height:200px;border-radius:12px;object-fit:cover;display:inline-block;margin-bottom:12px"/>
+    
+    <div style="font-weight:900">Leandro Alves</div>
+    <div style="color:var(--muted);font-size:13px">Tech Lead & Cientista de Dados</div>
+    
+    <div style="margin-top:10px;color:var(--muted);font-size:13px">
+        <strong>Stack:</strong> Python, RPA, SQL, Power BI, BigQuery, Airflow, LakeHouse, Machine Learning, IA, Lang Chain
+    </div>
+    
+    <div style="margin-top:10px; font-size:13px;">
+        <a href="https://www.linkedin.com/in/leandro-alves-souza" style="color:var(--accent); font-weight:700;" target="_blank">LinkedIn</a>
+        •
+        <a href="https://github.com/WillLeandro" style="color:var(--accent); font-weight:700;" target="_blank">GitHub</a>
+        
+    </div>
+    <div>
+      <a 
+              href="CIENTISTA_DE_DADOS_LEANDRO_ALVES_DE_SOUZA.pdf" 
+              download 
+              style="
+                display: inline-block;
+                padding: 05px 15px;
+                margin-top: 18px; /* Espaço acima do botão */
+                margin-bottom: 15px; /* Espaço abaixo do botão para separar dos links */
+                border-radius: 8px;
+                background: var(--accent); /* Cor de destaque (roxinho) */
+                color: #0b1020; /* Cor escura do texto (para contraste) */
+                font-weight: 500;
+                text-decoration: none;
+                transition: background 0.3s;
+              "
+          >Baixar CV
+        </a>
+    </div>
+      
+</div>
+    </section>
+    <section id="sobre" style="margin-top:50px">
+      <h1>Sobre mim e minha Jornada</h1>
+      <p>Sou um amante de café e defensor do <strong>"Simples bem feito, também impressiona"</strong>. <br>
+        De <strong>Professor de Química</strong> a <strong>Tech Lead em Dados</strong>, já atuei em diversos setores como E-commerce, Educação, Logística,
+        Consultoria de Dados e agora no setor Nutraceutico.<br><br>
+        Fui o primeiro profissional de dados na Maxinutri, onde ajudei a construir toda a área de Dados do zero, hoje cuido de um time com analistas e engenheiro de dados,
+        sou Co-fundador da Wize Analytics, onde lidero projetos de dados que transformam empresas PMEs orientada a Dados e também escreve na Dados e Café, uma nesletter
+        na área de Dados onde compartilho um pouco de minhas experiências e curiosidades sobre café.<br><br>
+      </p>
+      <!-- <div style="margin-top:10px;color:var(--muted)"><strong>Especialista no ciclo completo:</strong> ETL • Data Warehousing • Machine Learning • Dashboarding • Governança de Dados e RPA</div> -->
+    </section>
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+    <section id="projetos" style="margin-top:60px">
+      <h1>Projetos em Destaque</h1>
+      <div class="grid">
+        <div class="card">
+          <img src="images/imoveis.jpg" alt="Imóveis" onerror="this.style.display='none'"/>
+          <h3>Oportunidade Imobiliária  House Rocket</h3>
+          <div class="meta">Análise Exploratória • Mapas Interativos • Python • Streamlit</div>
+          <p style="margin-top:25px;color:var(--muted)">Solução para identificar imóveis abaixo do preço médio de mercado e definir preço ideal de revenda usando dados públicos e análise espacial.</p>
+          <a href="projetos/imoveis.html" style="display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none;font-weight:700">Ver Análise →</a>
+        </div>
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Portifólio de projetos de Ciência de Dados</strong></a>
-									<ul class="icons">
+        <div class="card">
+          <img src="images/rossmann.jpeg" alt="Rossmann" onerror="this.style.display='none'"/>
+          <h3>Forecast de Vendas - Rede de farmácia</h3>
+          <div class="meta">Machine Learning • XGBoost • Python • Deploy em Produção</div>
+          <p style="margin-top:25px;color:var(--muted)">Modelo preditivo que estima faturamento de +1.000 lojas nas próximas 6 semanas, com integração via Telegram para consultas em tempo real.</p>
+          <a href="projetos/rossmann.html" style="display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none;font-weight:700">Ver Projeto →</a>
+        </div>
 
-									</ul>
-								</header>
+        <!-- <div class="card">
+          <h3>Portfólio Completo</h3>
+          <div class="meta">ETL • Automação • Dashboards • Machine Learning</div>
+          <p style="margin-top:8px;color:var(--muted)">Coleção de projetos que demonstram expertise em todo o ciclo de dados, desde web scraping até modelos em produção.</p>
+          <a href="projetos/mais.html" style="display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none;font-weight:700">Explorar Projetos →</a>
+        </div>
+      </div> -->
+    </section>
 
-							<!-- Banner -->
-								<section id="banner">
-									<div class="content">
-										<header>
-											<h2>Olá, seja bem-vindo(a) ao meu portifólio de projetos de <br /> Ciência de Dados.<br />
-											</h2>
+    <section id="experiencias" style="margin-top:100px">
+      <h1>Trajetória Profissional</h1>
+      <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:12px">
+        <div class="card">
+          <h3>Wize Analytics — Cofundador & Tech Lead</h3>
+          <div class="meta">setembro de 2025 - Presente</div>
+          <p style="margin-top:8px;color:var(--muted)">Liderança técnica em consultoria de dados, desenvolvendo soluções end-to-end para transformação digital de PMEs.</p>
+        </div>
+        <div class="card">
+          <h3>Maxinutri — Tech Lead & Cientista de Dados</h3>
+          <div class="meta">outubro de 2024 - Presente</div>
+          <p style="margin-top:8px;color:var(--muted)">Estruturei a área de dados do zero: Data Warehouse, pipelines ETL, Power BI e governança.</p>
+        </div>
+        <div class="card">
+          <h3>Rocket Science — Cientista de Dados</h3>
+          <div class="meta">maio de 2023 - setembro de 2024</div>
+          <p style="margin-top:8px;color:var(--muted)">Desenvolvimento de modelos preditivos, pipelines de dados e dashboards estratégicos.</p>
+        </div>
+        <div class="card">
+          <h3>Comunidade DS — Cientista de Dados</h3>
+          <div class="meta">julho de 2022 - julho de 2025</div>
+          <p style="margin-top:8px;color:var(--muted)">Projetos colaborativos e mentoria em machine learning e análise de dados.</p>
+        </div>
+      </div>
+      <div style="margin-top:30px"><a href="experiencias.html" style="color:var(--accent);font-weight:500">Ver experiência completa →</a></div>
+    </section>
 
-										</header>
-										<p>Nessa página, eu demonstro minhas habilidades de resolver problemas de negócio utilizando conceitos e frramentas da Ciência de Dados, através de projetos com dados públicos.<p/>
+    <section id="contato" style="margin-top:50px">
+      <h1>Vamos Conversar?</h1>
+      <p>Estou sempre aberto a conversar sobre oportunidades em ciência de dados, engenharia de dados e liderança técnica.</p>    
+      <div style="margin-top:50px">
+        <a href="mailto:lasws.ds@gmail.com" style="color:var(--accent); font-weight:500; text-decoration:none;">lasws.ds@gmail.com</a>
+        • 
+        <a href="https://www.linkedin.com/in/leandro-alves-souza" style="color:var(--accent); font-weight:500;">LinkedIn</a>
+        •
+        <a href="https://github.com/WillLeandro" style="color:var(--accent); font-weight:500;">GitHub</a>
+        •
+        <a 
+              href="CIENTISTA_DE_DADOS_LEANDRO_ALVES_DE_SOUZA.pdf" 
+              download 
+              style="
+                display: inline-block;
+                padding: 05px 15px;
+                margin-top: 18px; /* Espaço acima do botão */
+                margin-bottom: 15px; /* Espaço abaixo do botão para separar dos links */
+                border-radius: 8px;
+                background: var(--accent); /* Cor de destaque (roxinho) */
+                color: #0b1020; /* Cor escura do texto (para contraste) */
+                font-weight: 500;
+                text-decoration: none;
+                transition: background 0.3s;
+              "
+          >Baixar CV
+        </a>
+    </section>
+  </main>
 
-												Você vai encontrar também, minhas experiências profissionais, habilidades, ferramentas e conceitos envolvendo a Ciência de Dados.</p>
-
-									</div>
-									<span class="image object">
-										<img src="images/pic16.png", alt="image", height="100px", width="300px" />
-									</span>
-								</section>
-
-								<!-- sobre mim -->
-									<section>
-										<header class="major">
-											<h2>Sobre mim</h2>
-										</header>
-										<div class="features">
-											<!-- Content -->
-											<h3 id="content">Meu nome é Leandro Alves</h3>
-
-
-
- 												<p>Atualmente, trabalho como motoboy, também trabalho com projetos pesoais de Ciência de Dados, para adquirir experiência
-												na solução de problemas de negócio e domínio sobre ferramentas de análise de dados.</p>
-
-												<p>Meu principal objetivo é me tornar
-												um profissional de dados com competências e habilidades em solucionar problemas de
-												dados usando técnicas de estatísticas e machine learning.</p>
-
-												<p>No momento tenho dois projetos finalizados em meu portifólio onde o primeiro identifico imóveis
-												abaixo do preço médio de compra, aplico técnicas de estatística e
-												análise exploratória de dados em Python, para encontrar o preço e momento ideal de revenda
-												com foco em uma taxa de lucro mais alta. O segundo realizo predição de vendas em 6 semanas
-												de uma rede de drogarias, onde criei um bot no telegram para consultar a previsão de vendas de cada loja usando
-												 técnicas de estatística e Machine Learning.</p>
-
-												<p>Estou buscando oportunidade de trabalhar profissionalmente como Analista de Dados ou Ciêntista de Dados para melhorar
-												a tomada de decisão da empresa, através da construção de soluções usando dados.</p>
-											</section>
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Habilidades</h2>
-									</header>
-									<div class="features">
-										<article>
-											<span class="icon fa-gem"></span>
-											<div class="content">
-												<h3>Linguagens de Programação e Banco de dados</h3>
-												<ul>
-													<li>Pyhon para análise de dados.</li>
-													<li>Web Scraping com Python.</li>
-													<li>SQL para extração de dados.</li>
-													<li>Banco de Dados SQLite, Postgres, MySQL, MongoDB e Cassandra.</li>
-
-												</ul>
-											</div>
-										</article>
-										<article>
-											<span class="icon solid fa-paper-plane"></span>
-											<div class="content">
-												<h3>Estatística e Machine Learning</h3>
-												<ul>
-													<li>Estatística descritiva (localização, dispersão, assimetria, kurtosis, densidade).</li>
-													<li> Algorítimos de Regressão, classificação, clusterização e ‘learn to rank’.</li>
-													<li>Técnicas de balanceamento dos dados, seleção de atributos e redução de dimensionalidade.</li>
-													<li>Métricas de performace dos algorítimos( RMSE, MAE, MAPE, Confusion Matrix, Precisão, Recall, Curva ROC, Curva Lift, AUC, Silhouette Score, DB-index).</li>
-													<li>Pacotes de Machine Learning: Sklearn e Scipy.</li>
-
-												</ul></div>
-										</article>
-										<article>
-											<span class="icon solid fa-rocket"></span>
-											<div class="content">
-												<h3>Vizualização de Dados</h3>
-												<ul>
-													<li>Matplotlib, Seaborn, Plotly.</li>
-													<li>Power BI, Tableau e Data Studio.</li>
-												</ul></div>
-										</article>
-										<article>
-											<span class="icon solid fa-signal"></span>
-											<div class="content">
-												<h3>Engenharia de Software</h3>
-												<ul>
-													<li>Git, Github, Gitlab, Cookiecutter, Virtual Environment e Docker.</li>
-													<li> Streamlit, Flask, Python APS’s.</li>
-													<li>Cloud Heroku e Google Cloud Platform ( GCP ).</li>
-												</ul></div>
-										</article>
-									</div>
-								</section>
-								<!-- Content -->
-									<section>
-										<header class="major">
-											<h2>Experiências Profissionais</h2>
-										</header>
-
-
-										<!-- Content -->
-											<h3 id="content">Projetos completos de Ciência de Dados</h3>
-											<p>Construção de soluções de dados para problemas de negócio, próximos dos desafios
-											reais das empresas, utilizando dados públicos de competições de Ciência de Dados,
-											onde eu abordei o problema desde a concepção do desafio de negócio até a
-											publicação do algoritmo treinado em produção, utilizando ferramentas de Cloud
-											Computing.</p>
-
-										<h3 id="content">Analista de BI</h3>
-										<p>1. Realização de coletas de dados em plataformas de vendas utilizando linguagem Python junto de técnicas de Web Scraping, ETL e estatística para análise e geração de hipóteses do mercado. Conseguindo um crescimento de 43% em 10 meses plataforma de ecommerce.<br>
-
-2. Desenvolvimento de métricas, criação de KPI e Dashboard usando Power BI e Google Data Studio, para indicar oportunidades de vendas e gerenciar o ecossistema online da empresa resultando em redução de custos nos processos operacionais.<br><br>
-
-Ferramentas: Python, google sheets, Power BI, Google Data Studio, Estatística, Pandas, Seaborn.</p>
-
-											<h3 id="content">Analista de pesquisa de dados</h3>
-											<p>1. Realizava coletas de dados em campo e através de ferramentas de pesquisas online, para identificação de novas oportunidades de negócio e criação de novos pontos de vendas.<br>
-
-2. Fazia Análises de Benchmarking para desenvolver estratégias de vendas e gerenciamento de estoque nas unidades físicas.<br><br>
-
-Ferramentas: google sheets, Excel, Google Data Studio e Estatística descritiva.</p>
-
-												<h3 id="content">Professor</h3>
-												<p>Lecionava as disciplinas de Matemática, física e Química no ensino fundamental e ensino médio seguindo o currículo estudantil do estado de São Paulo.
-Realizei junto de outros professores, projetos e oficinas de orientação de carreira para os alunos.</p>
-
-											</section>
-
-												<!-- Break -->
-
-
-							<!-- Section -->
-								<section>
-									<header class="major">
-										<h2>Projetos em Ciência de Dados</h2>
-									</header>
-									<div class="posts">
-										<article>
-											<a href="#" class="image"><img src="images/pic13.jpg" alt="" /></a>
-											<h3>Identificação de imóveis para compra e revenda a fim de maximizar o lucro</h3>
-											<p>Identificação de imóveis abaixo do preço médio de venda e definição do preço ideal de
-												revenda, a partir de uma análise exploratória de dados em Python.</p>
-												<h4>Ferramentas utilizadas</h4>
-												<ul>
-													<li>Git e Github</li>
-													<li>Python, Pandas, Numpy e Seaborn </li>
-													<li>Pycharm e Jupyter Notebook.</li>
-													<li>Mapas interativos com Plotly e Folium.</li>
-													<li>Heroku Cloud</li>
-													<li>Steamlit Python framework web.</li>
-												</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/WillLeandro/projeto_insigth_House_rocket/tree/main" class="button">Saiba mais</a></li>
-											</ul>
-
-
-											<a href="#" class="image"><img src="images/pic17.jpg" alt="" /></a>
-											<h3>Previsão de vendas da rede de drogarias Rossmann</h3>
-											<p>Construção de um modelo que estima o faturamento de cada loja nas próximas 6 semanas, com objetivo de identificar
-												quais lojas teriam faturamento suficiente para realizar reformas em sua estrutura. </p>
-												<h4>Ferramentas utilizadas</h4>
-												<ul>
-													<li>Git e Github</li>
-													<li>Python, Pandas, Numpy e Seaborn </li>
-													<li>Pycharm e Jupyter Notebook.</li>
-													<li>Algorítimo de ML XGBoost.</li>
-													<li>Heroku Cloud</li>
-													<li>Telegram App.</li>
-												</ul>
-											<ul class="actions">
-												<li><a href="https://github.com/WillLeandro/projeto_rossmann_data_science" class="button">Saiba mais</a></li>
-											</ul>
-										</article>
-									</div>
-								</section>
-
-								<section>
-									<header class="major">
-										<h2>Contato</h2>
-									</header>
-									<p>Se meu perfil é o que procuras, entre em contato.</p>
-									<ul class="contact">
-										<li class="icon solid fa-envelope"><a href="#">lasws@hotmail.com</a></li>
-										<li class="icon brands fa-linkedin"><a href="linkedin.com/in/leandro-alves-souza">Linkedin</a></li>
-								</ul>
-								</section>
-
-						</div>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+  <footer class="footer">
+    © Leandro Alves - 2025 | Cientista de Dados & Tech Lead
+  </footer>
+</div>
+</body>
 </html>
