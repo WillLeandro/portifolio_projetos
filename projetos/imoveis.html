@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Oportunidade Imobiliária - Portfólio de Projetos</title>
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="container">
+    <a href="../index.html#projetos" style="color:var(--muted);text-decoration:none">&larr; Voltar para Projetos</a>
+    
+    <h1 style="margin-top:16px;">Oportunidade Imobiliária (House Rocket)</h1>
+
+    <img src="../images/imoveis.jpg" alt="Imagem de capa do projeto de imóveis" style="width:600px; height:300px; object-fit:cover; border-radius:12px; margin-top:20px;"/>
+
+    <section style="margin-top:24px;">
+        <h2>Objetivo do Projeto</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            O objetivo é fornecer à equipe de negócios da House Rocket uma seleção de imóveis para poderem aplicar o modelo de monetização. A estratégia da House Rocket é comprar imóveis de baixo valor, em boas condições e com ótima localização, para revendê-los a um preço mais alto. Os insights gerados visam maximizar o lucro dentro do portfólio de imóveis à venda.
+        </p>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Questões de Negócio</h2>
+        <ul style="color:var(--muted); padding-left:20px;">
+            <li>Quais imóveis a House Rocket deveria comprar e a que preço?</li>
+            <li>Após adquirir um imóvel, qual é o melhor momento para vendê-lo e qual deve ser o preço de venda?</li>
+        </ul>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Sobre os Dados & Premissas</h2>
+        <div style="color:var(--muted);">
+            <p style="margin-top:8px;">Os dados utilizados para este projeto estão disponíveis no 
+                <a href="https://www.kaggle.com/datasets/harlfoxem/housesalesprediction/discussion/207885" target="_blank" style="color:var(--accent); font-weight:700;">Kaggle</a>, 
+                contendo 21 atributos de imóveis.
+            </p>
+            
+            <h3 style="margin-top:24px;">Dicionário de Dados</h3>
+            <img src="../images/dicionario.png" alt="Dicionário de dados do dataset de imóveis" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+
+            <h3 style="margin-top:24px;">Premissas de Negócio Adotadas:</h3>
+            <ul style="padding-left:20px; margin-top:8px;">
+                <li>O valor zero em <strong>yr_renovated</strong> indica que a casa não foi reformada.</li>
+                <li>O valor 33 em <strong>bathrooms</strong> foi considerado um erro de digitação e excluído da análise.</li>
+                <li><strong>Price</strong> indica o preço que a House Rocket pagará ou pagou pelo imóvel.</li>
+                <li>Duplicatas no campo <strong>id</strong> foram removidas.</li>
+                <li>A condição e a localização do imóvel foram os principais fatores na decisão de compra.</li>
+                <li>A estação do ano foi o critério para a venda do imóvel.</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section style="margin-top:36px;">
+        <h2>Estratégia para Solução</h2>
+        <ul style="color:var(--muted); padding-left:20px;">
+            <li>Coleta de dados.</li>
+            <li>Entendimento do negócio da House Rocket.</li>
+            <li>Tratamento, limpeza e exploração dos dados.</li>
+            <li>Levantamento e validação de hipóteses.</li>
+            <li>Conclusão e criação de visualizações interativas com Streamlit.</li>
+        </ul>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Hipóteses Relevantes</h2>
+        <p style="color:var(--muted); margin-top:8px;">Uma das etapas cruciais foi o levantamento e validação estatística das hipóteses de negócio:</p>
+        <img src="../images/hipoteses.png" alt="Tabela com as hipóteses de negócio e validação" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+    </section>
+    
+    <section style="margin-top:36px;">
+        <h2>Resultados e Conclusão</h2>
+        <div style="color:var(--muted);">
+            <p style="margin-top:8px;">O projeto alcançou o objetivo de gerar insights e responder às perguntas do CEO.</p>
+            <p style="margin-top:10px;">
+                Foram identificados 503 imóveis para compra, com um lucro total estimado de $ 36.891.031,80. O resultado foi entregue através de um dashboard em Streamlit, permitindo ao time de negócios consultar imóveis com potencial de lucro de forma rápida e fácil.
+            </p>
+        </div>
+    </section>
+    
+    <section style="margin-top:36px;">
+        <h2>Acesso ao Projeto</h2>
+        <div style="margin-top:10px; font-size:16px;">
+            <strong>Dashboard:</strong> <a href="[INSERIR LINK DO DASHBOARD AQUI]" target="_blank" style="color:var(--accent); font-weight:700;">Acessar Dashboard</a>
+            •
+            <strong>Repositório:</strong> <a href="https://github.com/WillLeandro/projeto_insigth_House_rocket/tree/main?tab=readme-ov-file" target="_blank" style="color:var(--accent); font-weight:700;">Ver Código (GitHub)</a>
+        </div>
+    </section>
+</div>
+</body>
+</html>

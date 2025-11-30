@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Forecast de Vendas (Rossmann) — Portfólio de Projetos</title>
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="container">
+    <a href="../index.html#projetos" style="color:var(--muted);text-decoration:none">&larr; Voltar para Projetos</a>
+    
+    <h1 style="margin-top:16px;">Previsão de Vendas (Forecast) — Rede de Drogarias Rossmann</h1>
+
+    <img src="../images/rossmann.jpg" alt="Imagem de capa do projeto Rossmann" style="width:600px; height:300px; object-fit:cover; border-radius:12px; margin-top:20px;"/>
+
+    <section style="margin-top:24px;">
+        <h2>Introdução</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            Solução para o desafio do Kaggle Rossmann Store Sales. Trata-se de um projeto end-to-end de Data Science, implementando uma regressão adaptada para séries temporais. Foram desenvolvidos quatro modelos para prever as vendas das lojas nas próximas seis semanas, com as previsões disponibilizadas via Bot no Telegram.
+        </p>
+        <p style="color:var(--muted); margin-top:10px;">
+            Este projeto foi desenvolvido no ambiente de estudos da Comunidade DS, focando em execução e discussão de projetos.
+        </p>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Plano de Desenvolvimento (CRISP-DM)</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            A solução foi realizada usando a metodologia CRISP-DM (Cross-Industry Standard Process for Data Mining), que transforma dados da empresa em conhecimento para auxiliar na tomada de decisões.
+        </p>
+        <ul style="color:var(--muted); padding-left:20px; margin-top:10px;">
+            <li>Entendimento do Problema de Negócio</li>
+            <li>Coleta e Limpeza dos Dados</li>
+            <li>Análise Exploratória dos Dados</li>
+            <li>Modelagem com Machine Learning, Validação Cruzada e Ajuste Fino</li>
+            <li>Avaliação dos Resultados e Tradução para o Negócio</li>
+            <li>Implantação do Modelo em Produção e Bot no Telegram</li>
+        </ul>
+        <img src="../images/crisp_dm.png" alt="Gráfico de validação da hipótese de sortimento" style="width:600px; height:400px;margin-top:10px;"/>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Entendimento do Problema de Negócio</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            O CEO solicitou ao time de dados uma solução mais assertiva para prever o faturamento de cada unidade nas próximas seis semanas, pois as previsões dos gerentes comprometiam a precisão dos resultados necessários para tomar decisões informadas sobre a reforma das lojas.
+        </p>
+        <h3 style="margin-top:18px;">Objetivos do Projeto:</h3>
+        <ul style="color:var(--muted); padding-left:20px;">
+            <li>Prever as vendas de cada loja nas próximas seis semanas.</li>
+            <li>Fornecer ao CEO uma forma rápida de acessar essas previsões pelo celular, de qualquer lugar.</li>
+        </ul>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Base de Dados, Premissas e Limpeza</h2>
+        <h3 style="margin-top:18px;">Premissas Adotadas:</h3>
+        <ul style="color:var(--muted); padding-left:20px; margin-top:8px;">
+            <li>Lojas com valores de venda maior que 0 e dias em que as lojas foram fechadas foram retirados.</li>
+            <li>Para as lojas sem 'Competition Distance', foi considerada a maior distância observada no conjunto de dados.</li>
+        </ul>
+
+        <h3 style="margin-top:18px;">Limpeza e Preparação de Dados:</h3>
+        <p style="color:var(--muted); margin-top:8px;">
+            Nesta fase, garantimos que os dados estivessem corretos e prontos para uso, evitando problemas que afetem a precisão das previsões:
+        </p>
+        <ul style="color:var(--muted); padding-left:20px; margin-top:10px;">
+            <li>Tratamento de Dados Faltantes (identificação e imputação de valores ausentes).</li>
+            <li>Correção de Erros e Inconsistências (incluindo entradas incorretas ou duplicadas).</li>
+            <li>Padronização e Transformação de Dados (ajustando formatos e convertendo variáveis).</li>
+        </ul>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Análise Exploratória dos Dados (EDA)</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            Criamos um mapa mental de hipóteses para guiar a exploração e entender a relevância das variáveis no aprendizado do modelo. Foram feitas análises univariadas, bivariadas e multivariadas.
+        </p>
+        <img src="../images/mapa_mental.png" alt="Gráfico de validação da hipótese de sortimento" style="width:600px; height:400px;margin-top:10px;"/>
+        
+        <h3 style="margin-top:18px;">Hipóteses Geradas (Exemplos):</h3>
+        <ul style="color:var(--muted); padding-left:20px; margin-top:8px;">
+            <li>Lojas com maior sortimento devem vender mais.</li>
+            <li>Lojas com concorrentes mais próximos devem vender menos.</li>
+            <li>Lojas devem vender menos nos finais de semana.</li>
+        </ul>
+
+        <h3 style="margin-top:18px;">Validação e Insights:</h3>
+        
+        <p style="color:var(--muted); margin-top:8px;">1. Hipótese: Lojas com maior sortimento deveriam vender mais.</p>
+        <p style="color:var(--muted);">Resultado: FALSA. Lojas com MAIOR SORTIMENTO vendem MENOS.</p>
+        <img src="../images/h1.png" alt="Gráfico de validação da hipótese de sortimento" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+
+        <p style="color:var(--muted); margin-top:18px;">2. Hipótese: Lojas com competidores mais próximos deveriam vender menos.</p>
+        <p style="color:var(--muted);">Resultado: FALSA. Lojas com competidores MAIS PRÓXIMOS vendem MAIS.</p>
+        <img src="../images/h2.png" alt="Gráfico e Heatmap de validação da hipótese de competidor" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+
+        <p style="color:var(--muted); margin-top:18px;">3. Hipótese: Lojas deveriam vender menos aos finais de semana.</p>
+        <p style="color:var(--muted);">Resultado: VERDADEIRA. Lojas vendem MENOS aos finais de semana.</p>
+        <img src="../images/h3.png" alt="Gráfico de validação da hipótese de vendas no final de semana" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+
+        <h3 style="margin-top:45px;">Tabela de Insights:</h3>
+        <img src="../images/tabela_hipoteses.png" alt="Tabela de resumo dos insights gerados pela EDA" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Modelagem com Machine Learning</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            Os dados foram preparados utilizando técnicas de Rescaling, Transformation (encodings e nature transformation) e Boruta para selecionar os melhores atributos, visando aprimorar a acurácia.
+        </p>
+
+        <h3 style="margin-top:18px;">Comparação de Modelos:</h3>
+        <p style="color:var(--muted); margin-top:8px;">
+            Foram testados e treinados 5 modelos (Random Forest, XGBoost Regressor, Linear Regressor, Lasso e Average Model). O Average Model foi usado como base de comparação. A técnica de Cross Validation foi aplicada para garantir a performance real.
+        </p>
+        <img src="../images/escolha_modelo.png" alt="Gráfico de comparação de performance entre os modelos de ML" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Avaliação e Tradução para o Negócio</h2>
+        <h3 style="margin-top:18px;">Ajuste Fino (Fine Tunning) e Performance:</h3>
+        <p style="color:var(--muted); margin-top:8px;">
+            Com o algorítimo XGBoost escolhido, foi realizado o Hyperparameter Fine Tunning através do método Random Search para encontrar a performance final sobre os dados de teste.
+        </p>
+        <img src="../images/desempenho.png" alt="Tabela de desempenho do XGBoost nos dados de teste" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+
+        <h3 style="margin-top:18px;">Interpretação de Erros (Viés de Negócio):</h3>
+        <p style="color:var(--muted); margin-top:8px;">
+            Nesta etapa, demonstramos o resultado do projeto avaliando a performance do modelo sob um viés financeiro, para demonstrar o resultado financeiro que se pode esperar do modelo desenvolvido.
+        </p>
+        <img src="../images/interpretacao_erros.png" alt="Visualização da tradução e interpretação de erros do modelo para o negócio" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+    </section>
+
+    <section style="margin-top:80px;">
+        <h2>Implantação em Produção e Bot no Telegram</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            O modelo foi publicado em um ambiente de nuvem (Heroku) para que outras pessoas ou serviços pudessem consultar as previsões e usar os resultados para tomadas de decisões.
+        </p>
+
+        <h3 style="margin-top:18px;">Esquema de Produção:</h3>
+        <img src="../images/fluxo_telegram.png" alt="Diagrama do esquema de implantação do modelo em produção" style="width:100%; height:auto; object-fit:contain; border-radius:8px; margin-top:10px; border: 1px solid rgba(255,255,255,0.05);"/>
+
+        <h2 style="margin-top:80px;">Bot no Telegram:</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            A etapa final foi criar um bot no aplicativo Telegram, permitindo consultar as previsões de vendas de qualquer loja, a qualquer momento e de qualquer lugar.
+        </p>
+        <img src="../images/demonstracao.gif" alt="Captura de tela da demonstração da aplicação do Bot no Telegram" style="width:500px; height:800px; object-fit:contain;margin-top:10px;"/>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Acesso ao Repositório   </h2>
+        <div style="margin-top:10px; font-size:16px;">
+            <strong></strong> <a href="https://github.com/WillLeandro" target="_blank" style="color:var(--accent); font-weight:700;">(GitHub)</a>
+        </div>
+    </section>
+</div>
+</body>
+</html>
