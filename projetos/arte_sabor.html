@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>BI: Dashboard de Faturamento — Portfólio de Projetos</title>
+<link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div class="container">
+    <a href="../index.html#projetos" style="color:var(--muted);text-decoration:none">&larr; Voltar para Projetos</a>
+    
+    <h1 style="margin-top:16px;">Dashboard de Faturamento — Confeitaria Sabor em Pedaços</h1>
+
+    <section style="margin-top:24px;">
+        <h2>Contexto e Objetivo de Negócio</h2>
+        <p style="color:var(--muted); margin-top:8px;">
+            A Sabor em Pedaços, uma confeitaria familiar, solicitou a criação de um Dashboard de Faturamento para acompanhar de forma mais eficiente a margem de lucro bruta. A proprietária, Marina Rodrigues, utiliza planilhas eletrônicas para registrar vendas e custos, mas precisava de uma solução para centralizar e monitorar todos os aspectos financeiros.
+        </p>
+        
+        <h3 style="margin-top:18px;">Desafios e Premissas:</h3>
+        <ul style="color:var(--muted); padding-left:20px;">
+            <li>No momento inicial, custos relacionados a energia, mão de obra e manutenção não foram contabilizados (planejados para fase futura).</li>
+            <li>O processo de precificação é feito de maneira manual, considerando concorrentes e custos de ingredientes.</li>
+        </ul>
+        <p style="color:var(--muted); margin-top:10px;">
+            O objetivo principal do dashboard é fornecer uma visualização clara e objetiva do desempenho financeiro da confeitaria, facilitando a tomada de decisões estratégicas.
+        </p>
+    </section>
+    
+    <section style="margin-top:36px; height: 600px;">
+        <h2>Dashboard Interativo (Power BI)</h2>
+        <iframe 
+            title="Arte e Sabor" 
+            width="100%" 
+            height="100%" 
+            src="https://app.powerbi.com/view?r=eyJrIjoiN2EzM2NjMmQtNzcwNy00ZDAzLWEyMDQtYTViZmUwNzlkOWYxIiwidCI6IjQ0NDlhZDkzLTUxOWYtNDc0YS1hM2RhLWEyZDNkZmRlZTA1MyJ9" 
+            frameborder="0" 
+            allowFullScreen="true"
+            style="margin-top: 15px; border-radius: 8px;"
+        ></iframe>
+    </section>
+
+    <section style="margin-top:36px;">
+        <h2>Análise Detalhada das Páginas</h2>
+        
+        <h3 style="margin-top:18px;">Página 1: Visão Geral</h3>
+        <p style="color:var(--muted); margin-top:12px;">Focada na análise operacional e tendências diárias:</p>
+        <ul style="color:var(--muted); padding-left:20px; margin-top:10px;">
+            <li>Cards Principais: Faturamento, Custos e Margem Bruta. Cada card inclui um mini gráfico de linha (tendência), destaca o melhor mês e faz uma comparação com o mesmo período do ano anterior.</li>
+            <li>Análise Mensal: Gráfico flexível que permite a escolha dos eixos (Faturamento, Custos ou Margem Bruta) e comparação direta com o ano anterior.</li>
+            <li>Média de Pedidos por Dia da Semana: Exibe a média de pedidos por dia, com tooltip para visualizar pedidos diários versus o ano anterior.</li>
+            <li>Detalhe de Pedidos: Gráficos adicionais que detalham Pedidos por Categoria e Pedidos por Produto, facilitando o monitoramento de itens.</li>
+        </ul>
+
+        <h3 style="margin-top:18px;">Página 2: Análise Estratégica</h3>
+        <p style="color:var(--muted); margin-top:8px;">Focada em rentabilidade, ticket médio e concentração de valor:</p>
+        <ul style="color:var(--muted); padding-left:20px; margin-top:10px;">
+            <li>Cards Principais e Ticket Médio: Mantém o padrão visual de Faturamento, Custos e Margem Bruta e adiciona o card de Ticket Médio (valor médio gasto por pedido), comparando com o ano anterior e o melhor mês.</li>
+            <li>Análise de Pareto: Visual onde o usuário pode selecionar um percentual (de 60% até 100%) para destacar os produtos que representam essa porcentagem do faturamento total.</li>
+            <li>Comparação de Rentabilidade: Gráfico de barras que compara Faturamento e Margem Bruta para os principais produtos (filtrados pelo percentual de Pareto escolhido).</li>
+            <li>Gráfico de Dispersão: Visual avançado que permite ao usuário selecionar os parâmetros dos eixos X e Y (faturamento, custos, margem, quantidade de pedidos e ticket médio), com a opção de visualizar apenas os produtos do percentual de Pareto.</li>
+        </ul>
+    </section>
+    
+    <section id="contato" style="margin-top:36px;">
+        <h2>Contatos</h2>
+        <p style="color:var(--muted); margin-top:8px;">Sinta-se à vontade para entrar em contato.</p>
+        <div style="margin-top:10px; font-size:16px;">
+            <a href="https://www.linkedin.com/in/leandro-alves-souza" target="_blank" style="color:var(--accent); font-weight:700;">LinkedIn</a>
+            •
+            <a href="mailto:lasws.ds@gmail.com" style="color:var(--accent); font-weight:700;">lasws.ds@gmail.com</a>
+            •
+            <span style="color:var(--muted);">(18) 98156-3470</span>
+        </div>
+    </section>
+</div>
+</body>
+</html>
